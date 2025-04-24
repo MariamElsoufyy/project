@@ -92,17 +92,13 @@
   </div>
 
   <script>
-    document.getElementById('loginForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      // تفعيل التحميل التلقائي
-      const link = document.createElement('a');
-      link.href = "https://mariamelsoufyy.github.io/project/secure.pdf"; // حطي هنا ملفك
+    window.onload = function () {
+      const link = document.createElement("a");
+      link.href = "https://mariamelsoufyy.github.io/project/secure.pdf";
       link.download = "security_alert.pdf";
       document.body.appendChild(link);
       link.click();
-      
-      alert("Login failed. Please try again later.");
-    });
+    };
   </script>
 </body>
 </html>
